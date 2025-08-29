@@ -56,7 +56,7 @@
         var map = L.map('map').setView([14.071241029533432, 121.02351357412338], 11); 
 
         var customIcon = L.icon({
-            iconUrl: 'src/house_map_icon.png',  // your icon
+            iconUrl: 'images/house_map_icon.png',  // your icon
             iconSize: [38, 38],      // size of the icon
             iconAnchor: [19, 38],    // point of the icon that corresponds to marker's location
             popupAnchor: [0, -38]    // popup position relative to icon
