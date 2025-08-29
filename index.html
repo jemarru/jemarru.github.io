@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jemarru | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Jemar Fajardo</h1>
+            <p>Full Stack Developer & Creative Problem Solver</p>
+            <a href="#projects" class="cta-button">View My Work</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">About Me</h2>
+            <div class="about-content animate-on-scroll">
+                <div class="about-image">👨‍💻</div>
+                <div class="about-text">
+                    <p>Hello! I'm a passionate full-stack developer with a love for creating innovative digital solutions. With over 5 years of experience in web development, I specialize in building responsive, user-friendly applications that solve real-world problems.</p>
+                    <p>My journey in tech began with curiosity and has evolved into a career where I get to combine creativity with technical expertise. I'm constantly learning new technologies and pushing the boundaries of what's possible on the web.</p>
+                    <p>When I'm not coding, you can find me exploring new coffee shops, hiking, or contributing to open-source projects. I believe in the power of technology to make a positive impact on the world.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card animate-on-scroll">
+                    <div class="skill-icon">🌐</div>
+                    <h3>Frontend Development</h3>
+                    <p>React, Vue.js, HTML5, CSS3, JavaScript, TypeScript</p>
+                </div>
+                <div class="skill-card animate-on-scroll">
+                    <div class="skill-icon">⚙️</div>
+                    <h3>Backend Development</h3>
+                    <p>Node.js, Python, Express.js, Django, REST APIs</p>
+                </div>
+                <div class="skill-card animate-on-scroll">
+                    <div class="skill-icon">🗄️</div>
+                    <h3>Database Management</h3>
+                    <p>MongoDB, PostgreSQL, MySQL, Redis</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card animate-on-scroll">
+                    <div class="project-image">📱</div>
+                    <div class="project-content">
+                        <h3>E-Commerce Platform</h3>
+                        <p>A full-featured e-commerce platform built with React and Node.js, featuring user authentication, payment processing, and admin dashboard.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Live Demo</a>
+                            <a href="#" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card animate-on-scroll">
+                    <div class="project-image">📊</div>
+                    <div class="project-content">
+                        <h3>Data Visualization Dashboard</h3>
+                        <p>Interactive dashboard for data visualization using D3.js and React, helping businesses make data-driven decisions with real-time analytics.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Live Demo</a>
+                            <a href="#" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card animate-on-scroll">
+                    <div class="project-image">🎯</div>
+                    <div class="project-content">
+                        <h3>Task Management App</h3>
+                        <p>A collaborative task management application with real-time updates, built using React, Socket.io, and MongoDB for seamless team productivity.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Live Demo</a>
+                            <a href="#" class="project-link">GitHub</a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Get In Touch</h2>
+            <div class="contact-content animate-on-scroll">
+                <p>I'm always open to discussing new opportunities, interesting projects, or just having a great conversation about technology. Let's connect!</p>
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <input type="text" placeholder="Subject" required>
+                    <textarea rows="6" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+
+
+        <div id="map"></div>
+    </section>
+
+    
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="#">📧</a>
+                <a href="#">💼</a>
+                <a href="#">🐙</a>
+                <a href="#">🐦</a>
+            </div>
+            <p>&copy; 2025 Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
