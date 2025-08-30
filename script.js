@@ -43,7 +43,6 @@
         // Form submission
         document.querySelector('.contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Thank you for your message! I\'ll get back to you soon.');
             this.reset();
         });
 
@@ -52,6 +51,49 @@
             const navLinks = document.querySelector('.nav-links');
             navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
         });
+
+    function sendMail(){
+        let params = {
+            name : document.getElementById("name").value,
+            email : document.getElementById("email").value,
+            subject : document.getElementById("subject").value,
+            message : document.getElementById("message").value
+        }
+
+        emailjs.send("service_ku2ka3l", "template_31l6kxd", params)
+        .then(() => {
+        showPopup(); // instead of alert
+        }, (err) => {
+        alert("Failed to send message: " + JSON.stringify(err));
+            });
+        }
+
+    const popup = document.getElementById("popup");
+    const closePopup = document.getElementById("closePopup");
+
+    // Show popup
+    function showPopup() {
+    popup.classList.remove("hidden");
+    }
+
+    // Hide popup
+    closePopup.addEventListener("click", () => {
+    popup.classList.add("hidden");
+    });
+
+    // Also hide if user clicks outside the box
+    window.addEventListener("click", (e) => {
+    if (e.target === popup) {
+        popup.classList.add("hidden");
+    }
+    });
+
+
+
+
+
+
+
 
         var map = L.map('map').setView([14.071241029533432, 121.02351357412338], 11); 
 

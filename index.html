@@ -6,6 +6,23 @@
     <title>jemarru | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "OWjSumDDnHOL93zy5",
+            });
+        })();
+    </script>
+
 </head>
 <body>
     <!-- Navigation -->
@@ -33,6 +50,7 @@
             <h1>Jemar Fajardo</h1>
             <p>Full Stack Developer & Creative Problem Solver</p>
             <a href="#projects" class="cta-button">View My Work</a>
+            <a href="#contact" class="cta-button">Contact Me</a>
         </div>
     </section>
 
@@ -41,7 +59,7 @@
         <div class="container">
             <h2 class="section-title animate-on-scroll">About Me</h2>
             <div class="about-content animate-on-scroll">
-                <div class="about-image">👨‍💻</div>
+                <div class="about-image"></div>
                 <div class="about-text">
                     <p>Hello! I'm a passionate full-stack developer with a love for creating innovative digital solutions. With over 5 years of experience in web development, I specialize in building responsive, user-friendly applications that solve real-world problems.</p>
                     <p>My journey in tech began with curiosity and has evolved into a career where I get to combine creativity with technical expertise. I'm constantly learning new technologies and pushing the boundaries of what's possible on the web.</p>
@@ -105,11 +123,10 @@
                 <div class="project-card animate-on-scroll">
                     <div class="project-image">🎯</div>
                     <div class="project-content">
-                        <h3>Task Management App</h3>
-                        <p>A collaborative task management application with real-time updates, built using React, Socket.io, and MongoDB for seamless team productivity.</p>
+                        <h3>Arduino IOT Data Logger</h3>
+                        <p>A monitoring device for my thesis project, monitoring the parameters of our hydropower device, created using C++, electronics and embedded systems.</p>
                         <div class="project-links">
-                            <a href="#" class="project-link">Live Demo</a>
-                            <a href="#" class="project-link">GitHub</a>
+                            
                         </div>
                         
                     </div>
@@ -125,11 +142,11 @@
             <div class="contact-content animate-on-scroll">
                 <p>I'm always open to discussing new opportunities, interesting projects, or just having a great conversation about technology. Let's connect!</p>
                 <form class="contact-form">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <input type="text" placeholder="Subject" required>
-                    <textarea rows="6" placeholder="Your Message" required></textarea>
-                    <button type="submit" class="submit-btn">Send Message</button>
+                    <input type="text" placeholder="Your Name" name = "name" id = "name" required>
+                    <input type="email" placeholder="Your Email" name = "email" id = "email" required>
+                    <input type="text" placeholder="Subject" name = "subject" id = "subject" required>
+                    <textarea rows="6" placeholder="Your Message" name = "message" id = "message" required></textarea>
+                    <button type="submit" onclick = "sendMail()" class="submit-btn">Send Message</button>
                 </form>
             </div>
         </div>
@@ -138,7 +155,13 @@
         <div id="map"></div>
     </section>
 
-    
+    <div id="popup" class="popup hidden">
+    <div class="popup-content">
+        <span id="closePopup" class="close">&times;</span>
+        <h2>Success!</h2>
+        <p>Your message has been sent. I'll get back to you soon.</p>
+    </div>
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -153,8 +176,11 @@
         </div>
     </footer>
 
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script src="script.js"></script>
     
+    
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        
+    <script src="script.js"></script>
+
 </body>
 </html>
