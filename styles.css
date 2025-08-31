@@ -47,9 +47,12 @@
         }
 
         .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #667eea;
+            width: 32px;
+            height: 32px;
+            background-image: url("images/android-chrome-512x512.png");
+            background-size: cover;      /* scales image to fill screen */
+            background-position: center; /* keeps it centered */
+            background-repeat: no-repeat;/* prevent tiling */
         }
 
         .nav-links {
@@ -66,7 +69,7 @@
         }
 
         .nav-links a:hover {
-            color: #667eea;
+            color: #7F8C8D;
         }
 
         .mobile-menu {
@@ -383,6 +386,89 @@
         .social-links a:hover {
             color: #2C3E50;
         }
+
+        .blog-section{
+            background-color: #ccd2d6;
+            
+            height: 100%;
+        }
+
+        .blog-title{
+            font: bold;
+            font-size: 60px;
+            margin: auto;
+            margin-bottom: 40px;
+        }
+
+        .blog-container{
+            padding-top: 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .blog-layout{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .blog-post-header span{
+            display: block;
+            font-size: small;
+        }
+
+        .blog-post-title{
+            color: #083461;
+            font-size: 30px;
+        }
+
+        hr{
+            margin: 20px 0;
+        }
+
+        .blog-date{
+            margin-bottom: 5px;
+        }
+
+        .blog-tags span{
+            display: inline-block;
+            background-color: #6a7575;
+            color: #e0e0e0;
+            padding: 0.3rem 0.75rem 0.3rem 0.75rem;
+            border-radius: 1rem;
+        }
+
+        .blog-post{
+            background-color: #ECF0F1;
+            width: 800px;
+            border-radius: 10px;
+            margin: 0 auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 3rem;
+        }
+
+        .blog-content p, ul{
+            font-size: 1rem;
+            padding: 5px 0;
+        }
+
+        .blog-content li{
+            margin-left: 30px;
+        }
+
+
+
+
+
+
+
+
+
 
         /* Animations */
         @keyframes fadeInUp {
