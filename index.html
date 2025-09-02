@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
@@ -30,12 +31,13 @@
         <div class="nav-container">
             <div class="logo"></div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="blog.html">Blog</a></li>
+                <li><a href="#home" class="hover-underline">Home</a></li>
+                <li><a href="#about" class="hover-underline">About</a></li>
+                <li><a href="#skills" class="hover-underline">Skills</a></li>
+                <li><a href="#projects" class="hover-underline">Projects</a></li>
+                <li><a href="#contact" class="hover-underline">Contact</a></li>
+                <li><a href="blog.html" class="hover-underline">Blog</a></li>
+                
             </ul>
             <div class="mobile-menu">
                 <span></span>
@@ -79,42 +81,36 @@
                     <h3>Frontend Development</h3>
                     <hr class="skill-separator">
                         <span class="blog-tags">
-                                <span>HTML5</span>
-                                <span>CSS3</span>
-                                <span>JavaScript</span>
-                                <span>TypeScript</span>
-                                <span>React</span>
+                                HTML5, CSS3, JavaScript, TypeScript, React
                         </span>
                 </div>
                 <div class="skill-card animate-on-scroll">
                     <h3>Backend Development</h3>
                     <hr class="skill-separator">
                         <span class="blog-tags">
-                                <span>Python</span>
-                                <span>Node.js</span>
-                                <span>REST APIs</span>
+                                Python, Node.js, REST APIs
                         </span>
                 </div>
                 <div class="skill-card animate-on-scroll">
                     <h3>Database Management</h3>
                     <hr class="skill-separator">
                         <span class="blog-tags">
-                                <span>MySQL</span>
-                                <span>MongoDB</span>
+                                MySQL, MongoDB
+                        </span>
                 </div>
                 <div class="skill-card animate-on-scroll">
                     <h3>3D Modelling</h3>
                     <hr class="skill-separator">
                         <span class="blog-tags">
-                                <span>AutoCAD</span>
-                                <span>SOLIDWORKS</span>
+                                AutoCAD, SOLIDWORKS
+                        </span>
                 </div>
                 <div class="skill-card animate-on-scroll">
                     <h3>General Programming</h3>
                     <hr class="skill-separator">
                         <span class="blog-tags">
-                                <span>Git</span>
-                                <span>C++</span>
+                                Git, C++
+                        </span>
                 </div>
             </div>
         </div>
@@ -195,12 +191,17 @@
     <footer>
         <div class="container">
             <div class="social-links">
-                <a href="#">📧</a>
-                <a href="#">💼</a>
-                <a href="#">🐙</a>
-                <a href="#">🐦</a>
+                <a href="mailto:fjemar11@gmail.com" class="socials-links">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/jemarfajardo" target="_blank" class="socials-links">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/jemarru" target="_blank" class="socials-links">
+                    <i class="fab fa-github"></i>
+                </a>
             </div>
-            <p>&copy; 2025 Your Name. All rights reserved.</p>
+            <p>&copy; 2025 Jemar Fajardo. All rights reserved.</p>
         </div>
     </footer>
 

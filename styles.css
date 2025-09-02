@@ -377,6 +377,7 @@
             justify-content: center;
             gap: 1rem;
             margin-bottom: 1rem;
+            align-items: end;
         }
 
         .social-links a {
@@ -420,7 +421,6 @@
         }
 
         .blog-post-header span{
-            display: block;
             font-size: small;
         }
 
@@ -441,19 +441,19 @@
             padding-top: 10px;
             display: flex;
             gap: 4px;
-            align-content: center;
-            justify-content: space-evenly;
+            align-content: flex-start;
+            justify-content: flex-start;
             flex-wrap: wrap;
-            max-width: 700px;
+            text-align: center;
         }
 
         .blog-tags span{
             background-color: #6a7575;
-            color: #e0e0e0;
+            color: #f0f0f0;
             padding: 0.3rem 0.75rem 0.3rem 0.75rem;
             border-radius: 1rem;
-            min-width: 100px;
-            
+            min-width: 50px;
+            text-align: center;
         }
 
         .blog-post{
@@ -479,6 +479,31 @@
             margin: 0;
             height: 3px;
         }
+
+        .hover-underline {
+            display: inline-block;       /* keeps underline tight to text */
+            position: relative;          /* so ::after is positioned relative to this */
+            cursor: pointer;
+        }
+
+        .hover-underline::after {
+            content: "";
+            position: absolute;
+            bottom: 0;                   /* place underline at bottom */
+            left: 0;
+            width: 0%;                   /* hidden at first */
+            height: 3px;                 /* thickness of underline */
+            background-color: rgb(160, 160, 0);       /* underline color */
+            transition: width 0.3s ease; /* smooth slide animation */
+        }
+
+        .hover-underline:hover::after {
+            width: 100%;                 /* expands fully on hover */
+        }
+
+
+
+
 
 
 
@@ -604,4 +629,14 @@
             to { opacity: 1; transform: translateY(0); }
             }
 
-            
+
+.socials-links {
+  font-size: 60px;         /* size of the icon */
+  color: gray;             /* default color */
+  transition: color 0.3s ease, transform 0.3s ease;  /* smooth hover effect */
+}
+
+.socials-link:hover {
+  color: #01db30;          /* LinkedIn blue on hover */
+  transform: translateY(-9px);
+}

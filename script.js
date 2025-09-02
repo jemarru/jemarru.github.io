@@ -12,6 +12,13 @@
             });
         });
 
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdown = document.querySelector('.dropdown');
+            const menu = dropdown.querySelector('.dropdown-menu');
+            dropdown.addEventListener('click', () => menu.style.display = 'block');
+            dropdown.addEventListener('mouseleave', () => menu.style.display = 'none');
+        });
+
         // Navbar scroll effect
         window.addEventListener('scroll', function() {
             const navbar = document.getElementById('navbar');
