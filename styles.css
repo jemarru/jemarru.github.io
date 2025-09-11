@@ -218,6 +218,8 @@
         }
 
         .skill-card {
+            display: flex;
+            flex-direction: column;
             background: white;
             padding: 2rem;
             border-radius: 15px;
@@ -225,7 +227,9 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
+            min-width: 300px;
             max-width: 400px;
+            align-items: center;
         }
 
         .skills .skill-card:hover {
@@ -478,6 +482,7 @@
         .skill-separator{
             margin: 0;
             height: 3px;
+            min-width: 100%;
         }
 
         .hover-underline {
